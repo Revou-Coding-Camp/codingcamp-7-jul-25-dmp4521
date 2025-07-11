@@ -20,7 +20,7 @@
             <h style="font-family:forte">Todo List My Daily Activities</h1></marquee>
     </header>
 
-    <main class="py-[16px] rounded">
+    <main class="container mx-auto px-4">
         <!-- Todo Input -->
         <form class="flex justify-between p-[8px]">
             <div class="flex gap-[8px]">
@@ -28,30 +28,49 @@
                 <input type="date" id="due-date-input" class="border rounded p-[4px] bg-yellow-100" placeholder="Due date">
             </div>
 
-            <button type="button" class="bg-purple-200 text-white p-[4px] rounded w-[50px]"
-                onclick="addTask();">+</button>
+            <button type="button" class="bg-yellow-100 text-black p-[4px] rounded w-[50px]"
+                onclick="addTask();"><b>+</b></button>
         </form>
 
         <!-- Todo Action -->
-        <section class="flex justify-between p-[8px]">
-            <div class="flex gap-[8px]">
-                <button class="bg-yellow-100 p-[4px] rounded">Filter</button>
-            </div>
-            <button class="bg-pink-100 p-[4px] rounded">Show All</button>
+         <div>
+        <section class="filter-section flex justify-between px-4">
+            <select class="border rounded p-[4px] bg-yellow-100" id="filterselect">
+                <option value="none" class="bg-yellow-100 p-[4px] rounded"><b>Filter</b></option>
+                <option value="complete" class="bg-yellow-100 p-[4px] rounded"><b>Show Completed</b></option>
+            </select>
+            <button class="bg-red-500 text-white p-[4px] rounded btn btn-primary" id="update">Update</button>
             <button class="bg-red-500 text-white p-[4px] rounded" onclick="deleteAllTasks();">Delete All</button>
-        </section>
+        </section></div>
 
         <!-- Todo List -->
-        <section>
-            <header>
-                <h2 class="text-xl font-bold">Tasks</h2>
-            </header>
-
-            <!-- Task List -->
-            <div id="task-list">
-                <p>Task is Empty!</p>
+        <div class="row mt-5">
+            <div class="col-12">
+        <style>
+        .table {
+    border-collapse: separate;
+    border-spacing: 15px 10px;
+    margin-top: 30px;}
+    .table td, .table th {
+    padding: 14px;}</style>
+                <table class="table table-bordered table-striped">
+                    <caption class="text-lg font-semibold mb-2">My Todo List</caption>
+                    <thead>
+                        <tr>
+                            <th><b>Task</b></th>
+                            <th><b>Due Date</b></th>
+                            <th><b>Status</b></th>
+                            <th><b>Actions</b></th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskList">
+                        <tr>
+                            <td colspan="4">Task is Empty!!</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
