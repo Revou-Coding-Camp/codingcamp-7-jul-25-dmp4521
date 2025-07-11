@@ -16,7 +16,8 @@
 <body class="flex flex-col items-center justify-evenly min-h-screen bg-purple-50">
     <!-- Hero Website -->
     <header>
-        <marquee class="text-3xl font-bold;border rounded p-[4px] bg-pink-100" style="color:black">
+        <marquee class="text-3xl font-bold;border rounded p-[4px] bg-pink-100" 
+        style="color:black">
             <h style="font-family:forte">Todo List My Daily Activities</h1></marquee>
     </header>
 
@@ -24,8 +25,10 @@
         <!-- Todo Input -->
         <form class="flex justify-between p-[8px]">
             <div class="flex gap-[8px]">
-                <input type="text" id="task-input" class="border rounded p-[4px] bg-yellow-100" placeholder="Add a new task">
-                <input type="date" id="due-date-input" class="border rounded p-[4px] bg-yellow-100" placeholder="Due date">
+                <input type="text" id="task-input" class="border rounded p-[4px] bg-yellow-100"
+                 placeholder="Add a new task">
+                <input type="date" id="due-date-input" class="border rounded p-[4px] bg-yellow-100" 
+                placeholder="Due date">
             </div>
 
             <button type="button" class="bg-yellow-100 text-black p-[4px] rounded w-[50px]"
@@ -36,11 +39,15 @@
          <div>
         <section class="filter-section flex justify-between px-4">
             <select class="border rounded p-[4px] bg-yellow-100" id="filterselect">
-                <option value="none" class="bg-yellow-100 p-[4px] rounded"><b>Filter</b></option>
-                <option value="complete" class="bg-yellow-100 p-[4px] rounded"><b>Show Completed</b></option>
+                <option value="none" class="bg-yellow-100 p-[4px] rounded">
+                    <b>Filter</b></option>
+                <option value="complete" class="bg-yellow-100 p-[4px] rounded">
+                    <b>Show Completed</b></option>
             </select>
-            <button class="bg-red-500 text-white p-[4px] rounded btn btn-primary" id="update">Update</button>
-            <button class="bg-red-500 text-white p-[4px] rounded" onclick="deleteAllTasks();">Delete All</button>
+            <button class="bg-red-500 text-white p-[4px] rounded btn btn-primary" 
+            id="update">Update</button>
+            <button class="bg-red-500 text-white p-[4px] rounded" onclick="deleteAllTasks();">
+                Delete All</button>
         </section></div>
 
         <!-- Todo List -->
